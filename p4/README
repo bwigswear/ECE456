@@ -1,0 +1,4 @@
+To compile run make, to clean run make clean
+
+To test code, run "./allreduce 1" to create the first instance and "./allreduce 2" for the second instance.
+Calling order does not matter, but only 1 or 2 will be allowed as input.

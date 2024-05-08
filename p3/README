@@ -1,0 +1,2 @@
+To test code, run make. This will create two executables: processproxy and threadproxy.
+Run either one with a port as argument. To remove executables, run make clean.

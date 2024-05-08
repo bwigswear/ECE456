@@ -1,0 +1,26 @@
+****************
+CS:APP Proxy Lab
+****************
+
+Makefile	- For building proxy
+README		- This file
+
+# Proxy source files
+proxy.{c,h}	- Primary proxy code
+csapp.{c,h}	- Wrapper and helper functions from the CS:APP text
+
+
+Compile the code using: "make"
+Run the code using: "./proxy {port #}"
+
+Writing Program Descriptions Here:
+
+I did not add any of my own helper functions because I did not find myself repeating
+any chunks of code. My code creates and binds a socket based on the inputted port and any
+addresses available via INADDR_ANY. It then loops while accepting incoming connections to the socket.
+It reads in any request sent to the socket. From the request, it resolves the host name and a port
+if a port is found. It opens a connection to the the webserver using the host and port, or port 80
+if none is given. Then, it reads the request sent by the browser into the open connection it has
+with the webserver. Next, it reads what the webserver's response is and writes that back to the
+client socket. Lastly, it opens the log file to write in a description of the request. I included some
+comments describing different parts of the code to replace what would otherwise be helper function descriptions.
